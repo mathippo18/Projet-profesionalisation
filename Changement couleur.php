@@ -14,12 +14,12 @@ function changer_couleur($color)
 	$pdo = null;
 	if ($result) {
         header("location:/index.php");
-		// Création page résultat variable en fonction de la demande header("location:/index.php");
+
 	}
 }
 $color = changer_couleur($_POST['color'],);
 if ($color != null && $_POST['s'] = "Changer") {
 	header("location:/index.php");
-	//Création page résultat variable en fonction de la demande header("location:/index.php");
+	
 }
 ?>
