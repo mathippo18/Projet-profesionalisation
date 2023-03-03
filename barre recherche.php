@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
  <head>
 
@@ -8,7 +8,7 @@
 
           content="width=device-width, initial-scale=1">
 
-    <title>Autocomplete using Jquery</title>
+    <title>Autocomplete using Jquery</title>-->
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -50,7 +50,7 @@
 
             "Call of duty : modern warfare 2",
 
-            /* Making a list of available tags */
+
 
             ];
 
@@ -58,9 +58,7 @@
 
             source: tags
 
-        /* #the tags is the id of the input element
 
-        source: tags is the list of available tags*/
 
             });
 
