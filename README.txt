@@ -1,1 +1,0 @@
-Ajouté par Alexandre pour le test.
