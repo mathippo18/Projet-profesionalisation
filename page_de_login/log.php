@@ -1,8 +1,8 @@
 <?php
 function chercher_id($identifiant, $MDP)
 {
-	$pdo = new PDO('sqlite:id.db');
-	$requete = "SELECT * FROM LOG WHERE identifiant=? AND MDP=?";
+	$pdo = new PDO('sqlite:../speed.db');
+	$requete = "SELECT * FROM Identifiant WHERE Identifiant=? AND MDP=?";
 	$stmt = $pdo->prepare($requete);
 	$stmt->bindValue(1, $identifiant, PDO::PARAM_STR);
 	$stmt->bindValue(2, $MDP, PDO::PARAM_STR);
