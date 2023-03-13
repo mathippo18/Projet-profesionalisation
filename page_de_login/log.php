@@ -2,7 +2,7 @@
 function chercher_id($identifiant, $MDP)
 {
 	$pdo = new PDO('sqlite:../speed.db');
-	$requete = "SELECT * FROM Identifiant WHERE Identifiant=? AND MDP=?";
+	$requete = "SELECT * FROM Identifiant WHERE identifiant=? AND MDP=?";
 	$stmt = $pdo->prepare($requete);
 	$stmt->bindValue(1, $identifiant, PDO::PARAM_STR);
 	$stmt->bindValue(2, $MDP, PDO::PARAM_STR);
@@ -12,12 +12,12 @@ function chercher_id($identifiant, $MDP)
 	if ($result) {
 	session_start();
 	$_SESSION['identifiant'] = $identifiant;
-		header("location:/Projet-TimeSkip/user.php");
+		header("location:/page_de_garde/Index.php");
 	}
 }
 $id = chercher_id($_POST['identifiant'], md5($_POST['MDP']));
 if ($id != null && $_POST['valider'] != "valider") {
-	header("location:/Projet-TimeSkip/user.php");
+	header("location:/page_de_garde/Index.php");
 }
 ?>
 <!DOCTYPE html>
