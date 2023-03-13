@@ -12,7 +12,7 @@ function chercher_id($identifiant, $MDP)
 	if ($result) {
 	session_start();
 	$_SESSION['identifiant'] = $identifiant;
-		header("location:/page_de_garde/Index.php");
+		header("location:../page_de_garde/Index.php");
 	}
 }
 $id = chercher_id($_POST['identifiant'], md5($_POST['MDP']));

@@ -69,6 +69,12 @@ body {
     left: 85%;
     bottom: 15px;
 }
+.log {
+  position: absolute;
+  color: whitesmoke;
+  left: 85%;
+  bottom: 45px;
+}
 
 @font-face {
     font-family: myFirstFont;

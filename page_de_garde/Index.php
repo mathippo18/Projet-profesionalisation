@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
     <head>
@@ -12,7 +15,16 @@
                 <!--barre de recherche + pseudo de la personne-->
                 <img width="75px" src="images/Trophee_Logo-removebg-preview">
                 <a href="https://www.horloge.nl/"><h1>TimeSkip</h1></a>
-                <a href="../page_de_login/log.php"><p class="accescompte">Connexion au compte</p></a> <!--mettre le lien de connexion au compte-->
+                
+                <?php
+                if ($_SESSION['identifiant']!=null)
+                {
+                    echo '<p class="log">'; echo $_SESSION["identifiant"]; echo '</p> <p class="accescompte"><a href="../page_de_login/kill.php">deconnection</a></p>';
+                    
+                }else{
+                    echo '<p class="accescompte"><a href="../page_de_login/log.php">connect</a></p>';
+                }?></p>
+               
             </div>
         </header>
     <!-- Side navigation -->
