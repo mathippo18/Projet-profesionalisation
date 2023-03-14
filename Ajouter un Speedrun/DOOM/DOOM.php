@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>TimeSkip</title>
-        <link rel="icon" href="images/Doom_Eternal_Logo.png">
-        <link rel="stylesheet" href="DOOM Eternal.css">
+        <link rel="icon" href="images/Doom_Logo.png">
+        <link rel="stylesheet" href="Doom.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js%22%3E"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js%22%3E"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js%22%3E%22%3E"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js%22%3E%22%3E"></script>
         <script>
         $( function() {
         var tags = [
@@ -59,7 +59,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
 }
 ?>
     </div>
-                <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" ><img id="DOOM_Logo" src="images/Doom_Eternal_Logo.png"></a>
+                <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" ><img id="DOOM_Logo" src="images/Doom_Logo.png"></a>
                 <?php
                 if ($_SESSION['identifiant']!=null)
                 {
@@ -67,12 +67,12 @@ if ($id != null && $_POST['s'] != "Rechercher") {
 
                 }else{
                     echo '<p class="accescompte"><a href="../page_de_login/log.php">connect</a></p>';
-                }?>         
+                }?>
                    </div>
         </header>
     <!--Side navigation-->
         <div class="sidenav">
-            <a href="https://www.twitch.tv/videos/484915587?t=0h0m1s"><img id="logo" src="images/Trophee_Logo-removebg-preview.png"></a>
+            <a href="https://www.twitch.tv/videos/484915587?t=0h0m1s%22%3E"><img id="logo" src="images/Trophee_Logo-removebg-preview.png"></a>
             <a href="../../page_de_garde/Index.php">Acceuil</a>                         <!--faire la page d'acceuil-->
             <a href="../../ajouter un Speedrun/depot.php">Déposer un speedrun</a>             <!--mettre un lien pour proposer de déposer un speedrun-->
             <a href="../../Forums/Forums.php">Forums</a>                          <!--fair eune page forum-->
@@ -84,7 +84,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
     <?php
     $db = new PDO('sqlite:../../speed.db');
     echo '<table>';
-    $result = $db->query('SELECT * FROM "Resultat_Doom Eternal"'); //changer par le nom du jeux dans la table
+    $result = $db->query('SELECT * FROM "Resultat_DOOM"'); //changer par le nom du jeux dans la table
     echo '<thead class="rowtitle"><tr><td>' . "Pseudo" . '</td><td>' . "Temps" . '</td></tr></thead>';
     while ($row = $result->fetch()) {
            echo '<tr><td>' . $row['Pseudo'] . '</td><td>' . $row['Temps'] . '</td></tr>';
