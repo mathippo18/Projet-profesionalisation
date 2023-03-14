@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>TimeSkip</title>
-        <link rel="icon" href="images/Doom_Eternal_Logo.png">
-        <link rel="stylesheet" href="DOOM Eternal.css">
+        <link rel="icon" href="images/Trover_Logo.png">
+        <link rel="stylesheet" href="Trover.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js%22%3E"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js%22%3E"></script>
@@ -59,7 +59,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
 }
 ?>
     </div>
-                <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" ><img id="DOOM_Logo" src="images/Doom_Eternal_Logo.png"></a>
+                <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" ><img id="DOOM_Logo" src="images/Trover_Logo.png"></a>
                 <?php
                 if ($_SESSION['identifiant']!=null)
                 {
@@ -84,7 +84,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
     <?php
     $db = new PDO('sqlite:../../speed.db');
     echo '<table>';
-    $result = $db->query('SELECT * FROM "Resultat_Doom Eternal"'); //changer par le nom du jeux dans la table
+    $result = $db->query('SELECT * FROM "Resultat_Trover saves the universe"'); //changer par le nom du jeux dans la table
     echo '<thead class="rowtitle"><tr><td>' . "Pseudo" . '</td><td>' . "Temps" . '</td></tr></thead>';
     while ($row = $result->fetch()) {
            echo '<tr><td>' . $row['Pseudo'] . '</td><td>' . $row['Temps'] . '</td></tr>';
