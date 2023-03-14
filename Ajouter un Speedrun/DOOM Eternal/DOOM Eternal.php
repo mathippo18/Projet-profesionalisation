@@ -1,13 +1,10 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title>TimeSkip</title>
         <link rel="icon" href="images/Doom_Eternal_Logo.png">
-        <link rel="stylesheet" href="DOOM_Eternal.css">
+        <link rel="stylesheet" href="DOOM Eternal.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js%22%3E"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js%22%3E"></script>
@@ -36,33 +33,42 @@ session_start();
     <body >
         <header>
             <div id="header">
-                <div id="google">
+                <div id="SearchBarre">
             <form method = "post">
                  <input type = "text" id = "nom_jeu" name = "nom_jeu"><input type = "submit" name = "s" value = "Rechercher">
                      </form>
+                     <?php
+function recherche($nom_jeu)
+{
+    $pdo = new PDO('sqlite:../../speed.db');
+    $requete = 'SELECT * FROM Recherche_jeu WHERE UPPER(Nom_jeu) LIKE ?';
+    $stmt = $pdo->prepare($requete);
+    $stmt->bindValue(1, $nom_jeu, PDO::PARAM_STR);
+    $stmt->execute();
+    $result = $stmt->fetch();
+    $pdo = null;
+    if ($result) {
+    $nom = $_POST['nom_jeu'];
+        header("location:../$nom/$nom.php");
+  }
+}
+$nom = $_POST['nom_jeu'];
+$id = recherche($_POST['nom_jeu'],);
+if ($id != null && $_POST['s'] != "Rechercher") {
+    header("location:../$nom/$nom.php");
+}
+?>
     </div>
-            <?php
-    $db = new PDO('sqlite:../../speed.db');
-    echo '<table>';
-    $result = $db->query('SELECT * FROM "Resultat_Doom Eternal"'); //changer par le nom du jeux dans la table
-    echo '<thead class="rowtitle"><tr><td>' . "Pseudo" . '</td><td>' . "Temps" . '</td></tr></thead>';
-    while ($row = $result->fetch()) {
-           echo '<tr><td>' . $row['Pseudo'] . '</td><td>' . $row['Temps'] . '</td></tr>';
-    }
-    echo '</table>';
-    ?>
-                <!--barre de recherche + pseudo de la personne-->
                 <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" ><img id="DOOM_Logo" src="images/Doom_Eternal_Logo.png"></a>
-               
-<?php
+                <?php
                 if ($_SESSION['identifiant']!=null)
                 {
                     echo '<p class="log">'; echo $_SESSION["identifiant"]; echo '</p> <p class="accescompte"><a href="../page_de_login/kill.php">deconnection</a></p>';
 
                 }else{
                     echo '<p class="accescompte"><a href="../page_de_login/log.php">connect</a></p>';
-                }?>
-            </div>
+                }?>         
+                   </div>
         </header>
     <!--Side navigation-->
         <div class="sidenav">
@@ -75,7 +81,16 @@ session_start();
     <!--Page content-->
         <div class="main">
             <!--code PHP-->
-   
+    <?php
+    $db = new PDO('sqlite:../../speed.db');
+    echo '<table>';
+    $result = $db->query('SELECT * FROM "Resultat_Doom Eternal"'); //changer par le nom du jeux dans la table
+    echo '<thead class="rowtitle"><tr><td>' . "Pseudo" . '</td><td>' . "Temps" . '</td></tr></thead>';
+    while ($row = $result->fetch()) {
+           echo '<tr><td>' . $row['Pseudo'] . '</td><td>' . $row['Temps'] . '</td></tr>';
+    }
+    echo '</table>';
+    ?>
             <!--code PHP-->
         </div>
     </body>
