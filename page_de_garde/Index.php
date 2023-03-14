@@ -22,7 +22,7 @@ session_start();
         "Sekiro",
         "Mario Galaxy",
         "Dead Rising 3",
-        "Doom",
+        "DOOM",
         "Trover saves the universe",
         "Choo-Choo Charles",
         "Call of duty : modern warfare 2",
@@ -56,13 +56,13 @@ function recherche($nom_jeu)
 	$pdo = null;
 	if ($result) {
     $nom = $_POST['nom_jeu'];
-        header("location:../$nom/$nom.php");
+        header("location:../page_de_jeux/$nom/$nom.php");
   }
 }
 $nom = $_POST['nom_jeu'];
 $id = recherche($_POST['nom_jeu'],);
 if ($id != null && $_POST['s'] != "Rechercher") {
-    header("location:../$nom/$nom.php");
+    header("location:../page_de_jeux/$nom/$nom.php");
 }
 ?>
  
@@ -73,8 +73,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
                     
                 }else{
                     echo '<p class="accescompte"><a href="../page_de_login/log.php">connect</a></p>';
-                }?></p>
-               
+                }?>
             </div>
         </header>
     <!-- Side navigation -->
@@ -103,20 +102,23 @@ if ($id != null && $_POST['s'] != "Rechercher") {
                                 <div id="CODWaW">
                                 <div id="CODMW2">
                                     <div id="EldenR">
+                                    <div id="suite">
                                         <div class="slider-content">
-                                            <a href="http://127.0.0.1:4000/page_de_jeux/SM64.php"><img src="images/SM64.png"></a>
-                                            <img src="images/SMG.png">
-                                            <img src="images/MC.png">
-                                            <img src="images/DOOM.png">
-                                            <img src="images/DOOM-E.png">
-                                            <img src="images/DR3.png">
-                                            <img src="images/trover.png">
-                                            <img src="images/Sekiro.png">
-                                            <img src="images/CCC.png">
-                                            <img src="images/CODWaW.png">
-                                            <img src="images/CODMW2.png">
-                                            <img src="images/EldenR.png">
+                                            <a href="../page_de_jeux/Mario 64/Mario 64.php"><img src="images/SM64.png"></a>
+                                            <a href="../page_de_jeux/Mario Galaxy/Mario Galaxy.php"></a><img src="images/SMG.png">
+                                            <a href="../page_de_jeux/Minecraft/Minecraft.php"></a><img src="images/MC.png">
+                                            <a href="../page_de_jeux/DOOM/DOOM.php"></a><img src="images/DOOM.png">
+                                            <a href="../page_de_jeux/Doom Eternal/Doom Eternal.php"></a><img src="images/DOOM-E.png">
+                                            <a href="../page_de_jeux/Dead Rising 3/Dead Rising 3.php"></a><img src="images/DR3.png">
+                                            <a href="../page_de_jeux/Trover saves the universe/Trover saves the universe.php"></a><img src="images/trover.png">
+                                            <a href="../page_de_jeux/Sekiro/Sekiro.php"></a><img src="images/Sekiro.png">
+                                            <a href="../page_de_jeux/Choo-Choo Charles/Choo-Choo Charles.php"></a><img src="images/CCC.png">
+                                            <a href="../page_de_jeux/Call of Duty : World at War/Call of Duty : World at War.php"></a><img src="images/CODWaW.png">
+                                            <a href="../page_de_jeux/Call of duty : modern warfare 2/Call of duty : modern warfare 2.php"></a><img src="images/CODMW2.png">
+                                            <a href="../page_de_jeux/Elden ring/Elden ring.php"></a><img src="images/EldenR.png">
+                                            <img src="images/suite.png">
                                         </div>*
+                                    </div>
                                     </div>
                                 </div>
                                 </div>        
@@ -143,6 +145,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
             <a href="#CODWaW"></a>
             <a href="#CODMW2"></a>
             <a href="#EldenR"></a>
+            <a href="#suite"></a>
             </div>
         </div>
     </body>

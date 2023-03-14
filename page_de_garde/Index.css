@@ -182,3 +182,7 @@ h1 {
   -webkit-transform: translateX(-16500px);
           transform: translateX(-16500px);
 }
+#suite:target .slider-content {
+  -webkit-transform: translateX(-18000px);
+          transform: translateX(-18000px);
+}
