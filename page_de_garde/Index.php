@@ -104,13 +104,13 @@ if ($id != null && $_POST['s'] != "Rechercher") {
                                 <div id="CODMW2">
                                     <div id="EldenR">
                                         <div class="slider-content">
-                                            <img src="images/SM64.png">
+                                            <a href="http://127.0.0.1:4000/page_de_jeux/SM64.php"><img src="images/SM64.png"></a>
                                             <img src="images/SMG.png">
                                             <img src="images/MC.png">
                                             <img src="images/DOOM.png">
                                             <img src="images/DOOM-E.png">
                                             <img src="images/DR3.png">
-                                            <img src="images/Trover.png">
+                                            <img src="images/trover.png">
                                             <img src="images/Sekiro.png">
                                             <img src="images/CCC.png">
                                             <img src="images/CODWaW.png">
