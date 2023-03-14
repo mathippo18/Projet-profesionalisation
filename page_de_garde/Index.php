@@ -12,7 +12,7 @@
                 <!--barre de recherche + pseudo de la personne-->
                 <img width="75px" src="images/Trophee_Logo-removebg-preview">
                 <a href="https://www.horloge.nl/"><h1>TimeSkip</h1></a>
-                <a href=""><p class="accescompte">Connexion au compte</p></a> <!--mettre le lien de connexion au compte-->
+                <a href="../page_de_login/log.php"><p class="accescompte">Connexion au compte</p></a> <!--mettre le lien de connexion au compte-->
             </div>
         </header>
     <!-- Side navigation -->
