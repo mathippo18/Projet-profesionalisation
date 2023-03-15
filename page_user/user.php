@@ -3,7 +3,7 @@ session_start();
 $id = $_SESSION['Identifiant']
 ?>
 <?php 
-function new_password($MDP,$MDP_conf)
+function new_password($MDP)
 {
 	$pdo = new PDO('sqlite:../speed.db');
 	$requete = 'UPDATE Identifiant SET MDP=? WHERE identifiant = $id';
@@ -15,17 +15,16 @@ function new_password($MDP,$MDP_conf)
 	if ($result) {
 		header("location:/kill.php");}
     }
-$id = new_password(md5($_POST['MDP']), md5($_POST['MDP_conf']));
-if ($id != null and $valider !="valider" and md5($_POST['MDP']) == md5($_POST['MDP_conf'])) {
+$new_mdp = new_password(md5($_POST['MDP']), md5($_POST['MDP_conf']));
+if ($new_mdp != null and md5($_POST['MDP']) == md5($_POST['MDP_conf'])) {
 	header("location:/kill.php");}
 ?>
 
 <!DOCTYPE html>
-
 <head>
 	<html lang="fr" dir="ltr">
 	<meta charset="utf-8">
-	<title>Authentification</title>
+	<title>Modification mot de passe</title>
 	<link rel="icon" href="icone.jpg">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -59,7 +58,7 @@ if ($id != null and $valider !="valider" and md5($_POST['MDP']) == md5($_POST['M
 			<div class="wrap-login100">
 				<div class="login100-form validate-form">
 					<span class="login100-form-title p-b-34 p-t-27">
-						Modification mot de passe
+						Modification du mot de passe de <?php echo$_SESSION["identifiant"];?>
 					</span>
 					<form method="POST">
 					<div class="wrap-input100 validate-input" data-validate="Enter new password">

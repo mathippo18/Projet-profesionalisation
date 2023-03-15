@@ -11,21 +11,22 @@ session_start();
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
+        <script src="../search.js">
         $( function() {
         var tags = [
         "Mario 64",
         "Minecraft",
         "Elden ring",
-        "Doom Eternal",
-        "Call of Duty : World at War",
+        "DOOM Eternal",
+        "Call of Duty World at War",
         "Sekiro",
         "Mario Galaxy",
         "Dead Rising 3",
         "DOOM",
         "Trover saves the universe",
         "Choo-Choo Charles",
-        "Call of duty : modern warfare 2",
+        "Call of duty modern warfare 2",
+        "Grub"
         ];
         $( "#nom_jeu" ).autocomplete({
         source: tags     
@@ -64,12 +65,13 @@ $id = recherche($_POST['nom_jeu'],);
 if ($id != null && $_POST['s'] != "Rechercher") {
     header("location:../page_de_jeux/$nom/$nom.php");
 }
+
 ?>
  
                 <?php
                 if ($_SESSION['identifiant']!=null)
                 {
-                    echo '<p class="log">'; echo $_SESSION["identifiant"]; echo '</p> <p class="accescompte"><a href="../page_de_login/kill.php">deconnection</a></p>';
+                    echo '<p class="log">'; echo '<a href="../page_user/user.php">'; echo$_SESSION["identifiant"];echo'</a>'; echo '</p> <p class="accescompte"><a href="../page_de_login/kill.php">deconnection</a></p>';
                     
                 }else{
                     echo '<p class="accescompte"><a href="../page_de_login/log.php">connect</a></p>';
@@ -101,21 +103,21 @@ if ($id != null && $_POST['s'] != "Rechercher") {
                             <div id="CCC">
                                 <div id="CODWaW">
                                 <div id="CODMW2">
-                                    <div id="EldenR">
+                                    <div id="UltraKill">
                                     <div id="suite">
                                         <div class="slider-content">
                                             <a href="../page_de_jeux/Mario 64/Mario 64.php"><img src="images/SM64.png"></a>
-                                            <a href="../page_de_jeux/Mario Galaxy/Mario Galaxy.php"></a><img src="images/SMG.png">
-                                            <a href="../page_de_jeux/Minecraft/Minecraft.php"></a><img src="images/MC.png">
-                                            <a href="../page_de_jeux/DOOM/DOOM.php"></a><img src="images/DOOM.png">
-                                            <a href="../page_de_jeux/Doom Eternal/Doom Eternal.php"></a><img src="images/DOOM-E.png">
-                                            <a href="../page_de_jeux/Dead Rising 3/Dead Rising 3.php"></a><img src="images/DR3.png">
-                                            <a href="../page_de_jeux/Trover saves the universe/Trover saves the universe.php"></a><img src="images/trover.png">
-                                            <a href="../page_de_jeux/Sekiro/Sekiro.php"></a><img src="images/Sekiro.png">
-                                            <a href="../page_de_jeux/Choo-Choo Charles/Choo-Choo Charles.php"></a><img src="images/CCC.png">
-                                            <a href="../page_de_jeux/Call of Duty : World at War/Call of Duty : World at War.php"></a><img src="images/CODWaW.png">
-                                            <a href="../page_de_jeux/Call of duty : modern warfare 2/Call of duty : modern warfare 2.php"></a><img src="images/CODMW2.png">
-                                            <a href="../page_de_jeux/Elden ring/Elden ring.php"></a><img src="images/EldenR.png">
+                                            <a href="../page_de_jeux/Mario Galaxy/Mario Galaxy.php"><img src="images/SMG.png"></a>
+                                            <a href="../page_de_jeux/Minecraft/Minecraft.php"><img src="images/MC.png"></a>
+                                            <a href="../page_de_jeux/DOOM/DOOM.php"><img src="images/DOOM.png"></a>
+                                            <a href="../page_de_jeux/DOOM Eternal/DOOM Eternal.php"><img src="images/DOOM-E.png"></a>
+                                            <a href="../page_de_jeux/Dead Rising 3/Dead Rising 3.php"><img src="images/DR3.png"></a>
+                                            <a href="../page_de_jeux/Trover saves the universe/Trover saves the universe.php"><img src="images/trover.png"></a>
+                                            <a href="../page_de_jeux/Sekiro/Sekiro.php"><img src="images/Sekiro.png"></a>
+                                            <a href="../page_de_jeux/Choo-choo Charles/Choo-Choo Charles.php"><img src="images/CCC.png"></a>
+                                            <a href="../page_de_jeux/Call of Duty World at War/Call of Duty World at War.php"><img src="images/CODWaW.png"></a>
+                                            <a href="../page_de_jeux/Call of duty modern warfare 2/Call of duty modern warfare 2.php"><img src="images/CODMW2.png"></a>
+                                            <a href="../page_de_jeux/UltraKill/UltraKill.php"><img src="images/UltraKill.png"></a>
                                             <img src="images/suite.png">
                                         </div>*
                                     </div>
@@ -144,7 +146,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
             <a href="#CCC"></a>
             <a href="#CODWaW"></a>
             <a href="#CODMW2"></a>
-            <a href="#EldenR"></a>
+            <a href="#UltraKill"></a>
             <a href="#suite"></a>
             </div>
         </div>
