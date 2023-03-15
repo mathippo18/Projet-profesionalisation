@@ -8,24 +8,25 @@ session_start();
         <title>TimeSkip</title>
         <link rel="icon" href="images/Doom_Logo.png">
         <link rel="stylesheet" href="Doom.css">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js%22%3E%22%3E"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js%22%3E%22%3E"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
         $( function() {
         var tags = [
         "Mario 64",
         "Minecraft",
-        "Elden ring",
+        "UltraKill",
         "Doom Eternal",
-        "Call of Duty : World at War",
+        "Call of Duty World at War",
         "Sekiro",
         "Mario Galaxy",
         "Dead Rising 3",
         "DOOM",
         "Trover saves the universe",
         "Choo-Choo Charles",
-        "Call of duty : modern warfare 2",
+        "Call of duty modern warfare 2",
+        "Grub",
         ];
         $( "#nom_jeu" ).autocomplete({
         source: tags
