@@ -6,8 +6,8 @@ session_start();
     <head>
         <meta charset="utf-8">
         <title>TimeSkip</title>
-        <link rel="icon" href="images/Trover_Logo.png">
-        <link rel="stylesheet" href="Trover.css">
+        <link rel="icon" href="images/Sekiro_Logo.png">
+        <link rel="stylesheet" href="Sekiro.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -63,7 +63,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
 }
 ?>
     </div>
-                <a href="https://store.steampowered.com/app/1051200/Trover_Saves_the_Universe/" ><img id="DOOM_Logo" src="images/Trover_Logo.png"></a>
+                <a href="https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/" ><img id="DOOM_Logo" src="images/Sekiro_Logo.png"></a>
                 <?php
                 if ($_SESSION['identifiant']!=null)
                 {
@@ -78,7 +78,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
         <div class="sidenav">
             <a href="https://www.twitch.tv/videos/484915587?t=0h0m1s"><img id="logo" src="images/Trophee_Logo-removebg-preview.png"></a>
             <a href="../../page_de_garde/Index.php">Acceuil</a>                         <!--faire la page d'acceuil-->
-            <a href="../../ajouter un Speedrun/depot.php">Déposer un speedrun</a>             <!--mettre un lien pour proposer de déposer un speedrun-->
+            <a href="../../page_de_jeux/depot.php">Déposer un speedrun</a>             <!--mettre un lien pour proposer de déposer un speedrun-->
             <a href="../../Forums/Forums.php">Forums</a>                          <!--fair eune page forum-->
             <a href="../../à propos/propos.php">à propos</a>                        <!--faire une page a propos-->
         </div>
@@ -88,7 +88,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
     <?php
     $db = new PDO('sqlite:../../speed.db');
     echo '<table>';
-    $result = $db->query('SELECT * FROM "Resultat_Trover"'); //changer par le nom du jeux dans la table
+    $result = $db->query('SELECT * FROM "Resultat_Sekiro"'); //changer par le nom du jeux dans la table
     echo '<thead class="rowtitle"><tr><td>' . "Pseudo" . '</td><td>' . "Temps" . '</td></tr></thead>';
     while ($row = $result->fetch()) {
            echo '<tr><td>' . $row['Pseudo'] . '</td><td>' . $row['Temps'] . '</td></tr>';

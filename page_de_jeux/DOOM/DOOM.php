@@ -78,7 +78,7 @@ if ($id != null && $_POST['s'] != "Rechercher") {
         <div class="sidenav">
             <a href="https://www.twitch.tv/videos/484915587?t=0h0m1s%22%3E"><img id="logo" src="images/Trophee_Logo-removebg-preview.png"></a>
             <a href="../../page_de_garde/Index.php">Acceuil</a>                         <!--faire la page d'acceuil-->
-            <a href="../../ajouter un Speedrun/depot.php">Déposer un speedrun</a>             <!--mettre un lien pour proposer de déposer un speedrun-->
+            <a href="../../page_de_jeux/depot.php">Déposer un speedrun</a>             <!--mettre un lien pour proposer de déposer un speedrun-->
             <a href="../../Forums/Forums.php">Forums</a>                          <!--fair eune page forum-->
             <a href="../../à propos/propos.php">à propos</a>                        <!--faire une page a propos-->
         </div>
